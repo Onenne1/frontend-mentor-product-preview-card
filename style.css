@@ -1,0 +1,257 @@
+/* IMPORT */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+}
+
+/* VARIABLES */
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-size: 14px;
+}
+
+/* GENERAL */
+
+html {
+  background-color: var(--cream);
+  color: var(--grey);
+  font-weight: var(--font-weight-normal);
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-size);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: var(--white);
+  width: min(91.5%, 686px);
+  min-height: auto;
+  max-height: 92vh;
+  border-radius: 0.7rem;
+}
+
+.img-desktop {
+  display: none;
+}
+
+.img-mobile {
+  margin: 0 0 1.8rem 0;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.main {
+  padding-inline: 1.85rem;
+}
+
+.alt-text {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  margin-bottom: 1.15rem;
+  font-size: calc(var(--font-size) - 1px);
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  font-weight: var(--font-weight-bold);
+  font-size: 2.3rem;
+  line-height: 1;
+  color: var(--black);
+  margin-bottom: 1.15rem;
+}
+
+.description {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.price {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.price-big {
+  font-family: "Fraunces", serif;
+  font-size: 2.3rem;
+  color: var(--green-500);
+  font-weight: var(--font-weight-bold);
+}
+
+.price-small {
+  text-decoration: line-through;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+  color: var(--white);
+  background-color: var(--green-500);
+  font-size: 1.1rem;
+  height: 3.6rem;
+  border-radius: 0.6rem;
+  margin-block: 1.2rem 2rem;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--green-700);
+  outline: none;
+}
+
+.button:active {
+  background-color: var(--green-500);
+  outline: none;
+}
+
+.button-icon {
+  margin-right: 0.8rem;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLETS */
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-self: center;
+    max-height: 50%;
+    border-radius: 0.7rem;
+  }
+
+  .hero,
+  .main {
+    width: 50%;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem 0 0 0.7rem;
+  }
+
+  .main {
+    padding-left: 1.85rem;
+    margin-top: 1rem;
+  }
+
+  .alt-text {
+    font-size: 1.3rem;
+    margin-block: 2.3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .description,
+  .price {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .price-big {
+    font-size: 3rem;
+  }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    max-width: 41.8%;
+    max-height: 56vh;
+    border-radius: 1vw;
+  }
+
+  .hero,
+  .main {
+    width: 50%;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw 0 0 1vw;
+  }
+
+  .main {
+    padding-left: 2.2vw;
+    margin-top: 0;
+  }
+
+  .alt-text {
+    font-size: 0.75rem;
+    margin-block: 2.5rem 1.8rem;
+  }
+
+  .title {
+    font-size: 2.35rem;
+    line-height: 0.95;
+    margin-bottom: 1.5vw;
+  }
+
+  .description,
+  .price {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .price {
+    margin-block: 1.5vw 2vw;
+    gap: 1vw;
+  }
+
+  .price-big {
+    font-size: 2.35rem;
+  }
+
+  .button {
+    font-weight: normal;
+  }
+}
