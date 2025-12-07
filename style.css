@@ -16,10 +16,6 @@ img {
   height: auto;
 }
 
-button {
-  font: inherit;
-}
-
 /* VARIABLES */
 
 :root {
@@ -110,6 +106,7 @@ body {
 }
 
 .button {
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
